@@ -64,6 +64,19 @@
         position: relative;
         padding-bottom: 4em;
     }
+
+}
+@media only screen and (max-width: 767px) {
+.border_login {
+  border-right: none;
+  border-bottom: 1px dotted #ccc
+}
+.total_mobile {
+  display: block;
+}
+.total_pc {
+  display: none;
+}
 }
 @media only screen and (max-width: 660px) {
     .js-offcanvas.c-offcanvas--left {
@@ -156,4 +169,5 @@
     .product {
         width: 100%;
     }
+
 }

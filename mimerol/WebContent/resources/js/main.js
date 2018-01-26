@@ -1,4 +1,10 @@
 $(document).ready(function() {
+
+  $(window).load(function(){
+    $('.form-input input').on('focus blur', function (e) {
+        $(this).parents('.form-input').toggleClass('active', (e.type === 'focus' || this.value.length > 0));
+    }).trigger('blur');
+  });
     //
     $("#sticker").sticky({
         topSpacing: 78,
@@ -271,3 +277,19 @@ $(document).ready(function() {
 });
 
 /* sticker */
+$(document).ready(function(){
+ 	 // on click signup It Hide Login Form and Display Registration Form
+	 $("#signup").click(function(){
+       $("#first").slideUp("fast", function(){
+		  $("#second").slideDown("fast");
+	   });
+	 });
+
+	 // on click signin It Hide Registration Form and Display Login Form
+     $("#signin").click(function(){
+       $("#second").slideUp("fast",function(){
+	      $("#first").slideDown("fast");
+	   });
+	 });
+
+});
